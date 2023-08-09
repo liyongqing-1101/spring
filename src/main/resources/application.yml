@@ -1,1 +1,15 @@
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 30s
+
+logging:
+  level:
+    com:
+      bitflow: debug
+spring:
+  freemarker:
+    suffix: .ftl
+    prefix: /
 
