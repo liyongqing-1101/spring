@@ -1,4 +1,4 @@
-package com.bitflow.spring_learn;
+package com.bitflow.spring_learn.a01;
 
 import org.springframework.context.ApplicationEvent;
 

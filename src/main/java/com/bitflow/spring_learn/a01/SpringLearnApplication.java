@@ -1,13 +1,11 @@
-package com.bitflow.spring_learn;
+package com.bitflow.spring_learn.a01;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.io.Resource;
 
-import java.awt.*;
 import java.io.IOException;
-import java.util.Locale;
 
 @SpringBootApplication
 public class SpringLearnApplication {
@@ -38,6 +36,12 @@ public class SpringLearnApplication {
         context.getBean(Component1.class).register();
 
 
+        /*
+          4. 学到了什么
+            a. BeanFactory 与 ApplicationContext 并不仅仅是简单的继承关系，ApplicationContext 组合并扩展了 BeanFactory接口
+            b. 又学到了一种代码之间的解耦方式
+            练习：完成用户注册与发送短信之间的解耦，用事件方式和 AOP 两个方式分别实现
+         */
     }
 
 }

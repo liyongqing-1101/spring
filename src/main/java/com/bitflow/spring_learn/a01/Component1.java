@@ -1,8 +1,7 @@
-package com.bitflow.spring_learn;
+package com.bitflow.spring_learn.a01;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
