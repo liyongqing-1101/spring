@@ -26,6 +26,7 @@ public class Bean1 {
         this.bean2 = bean2;
     }
 
+    @Autowired
     private Bean3 bean3;
 
     @Resource
@@ -38,7 +39,7 @@ public class Bean1 {
 
     @Autowired
     public void setHome(@Value("${JAVA_HOME}") String home) {
-        log.debug("@Value 生效{}", home);
+        log.debug("@Value 生效{} ", home);
         this.home = home;
     }
 
