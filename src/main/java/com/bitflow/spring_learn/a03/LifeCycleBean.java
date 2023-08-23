@@ -1,6 +1,7 @@
 package com.bitflow.spring_learn.a03;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -16,7 +17,7 @@ import javax.annotation.PreDestroy;
  */
 @Slf4j
 @Component
-public class LifeCycleBean {
+public class LifeCycleBean implements BeanNameAware {
 
     public LifeCycleBean() {
         log.debug("构造");
@@ -35,5 +36,10 @@ public class LifeCycleBean {
     @PreDestroy
     public void destroy() {
         log.debug("销毁");
+    }
+
+    @Override
+    public void setBeanName(String name) {
+        log.debug("记录一下 aware" + ": " + name);
     }
 }
