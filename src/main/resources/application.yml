@@ -1,8 +1,9 @@
 server:
   port: 8080
+  # 设置 session的会话的超时时间为10s
   servlet:
     session:
-      timeout: 30s
+      timeout: 10s
 
 logging:
   level:
