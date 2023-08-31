@@ -20,9 +20,11 @@ public class A14 {
         Target target = new Target();
         proxy.setMethodInterceptor(new MethodInterceptor() {
             @Override
-            public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
+            public Object intercept(Object p, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
                 System.out.println("before...");
-                return method.invoke(target, args);
+//                return method.invoke(target, args);  普通的反射
+//                return methodProxy.invoke(target, args); // 内部无反射，结合目标用
+                return methodProxy.invokeSuper(p, args); // 内部无反射，结合代理用
             }
         });
 
